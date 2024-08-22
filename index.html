@@ -7,24 +7,29 @@
     <title>Trần Văn Nhân</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    .content {
+        .content {
             max-width: 800px;
             margin: auto;
         }
+
         .input-group input {
             cursor: default;
         }
+
         .input-group button {
             cursor: pointer;
         }
+
         .mt-5 {
             margin-top: 3rem !important;
         }
+
         .copy-alert {
             display: none;
             color: green;
             margin-top: 10px;
         }
+
         .divider {
             height: 1px;
             background: #333;
@@ -34,19 +39,21 @@
 </head>
 
 <body>
-    <div class="container content mt-5">
+    <div class="container content mt-3">
         <div class="text-center">
             <p class="fs-1 fw-semibold text-success">Share ID Apple Tải App Egern Trên AppStore</p>
+            <p class="fw-semibold text-info">Hướng dẫn và các thông tin liên hệ ở cuối trang. Vui lòng lướt xuống đọc hết.</p>
+            <p class="fw-semibold text-danger">Vui lòng giữ gìn tải khoản cho cộng đồng và những người ở sau</p>
         </div>
         <div class="divider"></div>
-        <div class="text-center pt-3">
-            <h3>ID:</h3>
+        <div class="text-center pt-2">
+            <h4>ID:</h4>
             <div class="input-group mb-3 px-3">
                 <input type="text" class="form-control" id="emailInput" readonly>
                 <button class="btn btn-primary" type="button" id="emailCopyBtn">Copy</button>
             </div>
             <div id="emailAlert" class="copy-alert">Copied to clipboard</div>
-            <h3>Password:</h3>
+            <h4>Password:</h4>
             <div class="input-group mb-3 px-3">
                 <input type="text" class="form-control" id="passwordInput" readonly>
                 <button class="btn btn-primary" type="button" id="passwordCopyBtn">Copy</button>
@@ -55,9 +62,33 @@
         </div>
         <div class="divider"></div>
         <div class="text-center">
-            <span class="fs-3 fw-semibold text-danger">Lưu Ý: Tải xong Egern nhớ Logout/Đăng Xuất ra để mọi người ở sau còn tải</span>
+            <span class="fs-4 fw-semibold text-danger">Lưu Ý: Bỏ qua các bước bảo mật tài khoản khi đăng nhập ->></span>
             <br>
-            <span class="fs-3 fw-semibold text-danger">Nếu ID bị Die vui lòng chờ tới khi tôi cập nhập ID mới</span>
+            <a class="fs-5 fw-semibold" href="https://youtu.be/D2B3jSlqATE">Hướng dẫn Đăng Nhập</a>
+            <div class="divider"></div>
+            <span class="fs-4 fw-semibold text-danger">Lưu Ý: Tải xong Egern nhớ Logout/Đăng Xuất ra để mọi người ở sau còn tải ->></span>
+            <br>
+            <a class="fs-5 fw-semibold" href="https://youtu.be/D2B3jSlqATE">Hướng dẫn Đăng Nhập</a>
+            <br>
+            <a href="https://youtu.be/l0OsxzpOQlM" class="fw-semibold">Hướng dẫn Up LocketGold ở dưới</a>
+            <div class="divider"></div>
+            <span class="fs-4 fw-semibold text-danger">Nếu ID bị Die vui lòng chờ tới khi tôi cập nhập ID mới.</span>
+            <br>
+            <span class="fs-4 fw-semibold text-danger">Nếu bạn cần ID gấp và tôi chưa cập nhập ID kịp hãy liên hệ với tôi qua <a href="https://www.facebook.com/tranvannhan.77c1">FaceBook</a> hoặc <a href="https://www.tiktok.com/@tranvannhan.77c1">TikTok - @tranvannhan.77c1</a> để tôi cập nhập ngay nhé.</span>
+            <div class="divider"></div>
+            <span class="fs-3 fw-semibold text-success">Ủng hộ tôi để tiếp tục chia sẻ những tài khoản hữu ích! Mỗi đóng góp của bạn đều giúp tôi duy trì và phát triển dịch vụ. Cảm ơn sự hỗ trợ của bạn!</span>
+            <br>
+            <div class="text-center">
+                <span class="fs-3 fw-semibold text-info">Ngân Hàng Vietcombank -- STK: <span class="fs-3 fw-semibold text-info" id="stkDisplay"></span></span>
+                <button class="btn btn-success" type="button" id="stkCopyBtn">Copy STK</button>
+                <div><span class="fs-3 fw-semibold text-info">Chủ Tài Khoản: Trần Văn Nhân</span></div>
+                <div id="stkAlert" class="copy-alert">Copied to clipboard</div>
+            </div>
+            <div class="text-center">
+                <span class="fs-3 fw-semibold text-info">Momo: <span class="fs-3 fw-semibold text-info" id="momoDisplay"></span></span>
+                <button class="btn btn-success" type="button" id="momoCopyBtn">Copy Momo</button>
+                <div id="momoAlert" class="copy-alert">Copied to clipboard</div>
+            </div>
         </div>
         <div class="divider"></div>
         <div class="text-center pt-3">
@@ -81,6 +112,9 @@
                 <p class="fw-medium fs-3 text-primary">Video Hướng Dẫn Up Locket Gold</p>
                 <iframe width="100%" height="600px" src="https://www.youtube.com/embed/l0OsxzpOQlM?si=dE3FX8m4LLkFmUSP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            <div>
+                <p class="fw-medium fs-3 text-dark">Trang web được tạo và duy trì bởi Trần Văn Nhân</p>
+            </div>
         </div>
     </div>
 
@@ -88,23 +122,29 @@
         const email = "egern99@pixelinvestors.com";
         const password = "PalestinianAreTerrorist3)akwebguide.com";
         const url = "https://aqvpn.me/scripts/locket.yaml";
+        const stk = "0051000567257";
+        const momo = "0376758600";
 
         document.getElementById('emailInput').value = email;
         document.getElementById('passwordInput').value = password;
         document.getElementById('urlInput').value = url;
+        document.getElementById('stkDisplay').textContent = stk; 
+        document.getElementById('momoDisplay').textContent = momo; 
 
         document.getElementById('emailCopyBtn').addEventListener('click', () => copyToClipboard(email, 'emailAlert'));
         document.getElementById('passwordCopyBtn').addEventListener('click', () => copyToClipboard(password, 'passwordAlert'));
         document.getElementById('urlCopyBtn').addEventListener('click', () => copyToClipboard(url, 'urlAlert'));
+        document.getElementById('stkCopyBtn').addEventListener('click', () => copyToClipboard(stk, 'stkAlert'));
+        document.getElementById('momoCopyBtn').addEventListener('click', () => copyToClipboard(stk, 'momoAlert')); 
 
         function copyToClipboard(text, alertId) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('Copied to clipboard'); // Thông báo dạng cửa sổ
+                alert('Copied to clipboard');
                 const alertElement = document.getElementById(alertId);
                 alertElement.style.display = 'block';
                 setTimeout(() => {
                     alertElement.style.display = 'none';
-                }, 2000);
+                }, 3500);
             }, (err) => {
                 console.error('Could not copy text: ', err);
             });
